@@ -36,7 +36,7 @@ import java.util.Queue;
         for(int i = 0;i < Q;i++){
             int s = ni(), t = ni();
             qs[i] = ns().toCharArray();
-            es[i] = (long)s<<32|(long)i<<1|0;
+            es[i] = (long) s << 32 | (long) i << 1;
             es[i+Q] = (long)t+1<<32|(long)i<<1|1;
         }
         Arrays.sort(es);
