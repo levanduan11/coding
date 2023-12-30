@@ -21,5 +21,8 @@ public class App1 {
         int[] arr =range(0,50).map(i->ran.nextInt(50)).toArray();
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
+        if (true){
+            throw new RuntimeException("has some error");
+        }
     }
 }
