@@ -1,0 +1,6 @@
+ne Hundred null Three MillionFour Hundred null Six ThousandSeven Hundred null Nine
+ifty ThousandEight Hundred null Eight
+ne Hundred null Three
+welve ThousandThree Hundred null Five
+ne MillionTwo Hundred null Four ThousandFive Hundred null Seven
+welve MillionThree Hundred null Five ThousandSix Hundred null Eight
