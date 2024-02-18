@@ -1,4 +1,4 @@
-package dsa.string;
+package com.coding.dsa.string;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

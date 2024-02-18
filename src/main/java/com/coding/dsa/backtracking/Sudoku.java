@@ -1,4 +1,4 @@
-package dsa.backtracking;
+package com.coding.dsa.backtracking;
 
 import java.util.Arrays;
 

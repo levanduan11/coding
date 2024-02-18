@@ -33,7 +33,7 @@ public final class OutputWriter {
                 os.writeObject(obj);
                 os.flush();
             }
-            Files.writeString(writePath, s, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
+            Files.writeString(writePath, s, StandardOpenOption.CREATE, StandardOpenOption.WRITE,StandardOpenOption.TRUNCATE_EXISTING);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

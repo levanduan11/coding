@@ -1,4 +1,4 @@
-package dsa.string;
+package com.coding.dsa.string;
 
 import java.io.BufferedReader;
 import java.io.IOException;

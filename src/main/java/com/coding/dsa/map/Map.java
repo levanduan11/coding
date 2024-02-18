@@ -1,4 +1,4 @@
-package dsa.map;
+package com.coding.dsa.map;
 
 import java.util.Collection;
 import java.util.function.Consumer;
