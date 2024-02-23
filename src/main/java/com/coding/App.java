@@ -24,6 +24,7 @@ public class App {
                     int id = r.nextInt(10000);
                     return new Person(id);
                 }).toArray(Person[]::new);
+        InputStream is = new BufferedInputStream(new FileInputStream(""));
 
     }
 }
