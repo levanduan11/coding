@@ -3,18 +3,17 @@ package com.coding.hard;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.StringJoiner;
 
 public class SerializeDeserializeBinaryTree {
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.right.left = new TreeNode(4);
-        root.right.right = new TreeNode(5);
+        TreeNodeV2 root = new TreeNodeV2(1);
+        root.left = new TreeNodeV2(2);
+        root.right = new TreeNodeV2(3);
+        root.right.left = new TreeNodeV2(4);
+        root.right.right = new TreeNodeV2(5);
         Codec codec = new Codec();
         String enc = codec.serialize(root);
-        TreeNode dec = codec.deserialize(enc);
+        TreeNodeV2 dec = codec.deserialize(enc);
         System.out.println(dec);
     }
 }
@@ -22,29 +21,29 @@ public class SerializeDeserializeBinaryTree {
 class Codec {
 
     // Encodes a tree to a single string.
-    public String serialize(TreeNode root) {
+    public String serialize(TreeNodeV2 root) {
         String res = preorder(root);
         return res.substring(0,res.length()-1);
     }
 
     // Decodes your encoded data to tree.
-    public TreeNode deserialize(String data) {
+    public TreeNodeV2 deserialize(String data) {
         Queue<String> nodes = new LinkedList<>(Arrays.asList(data.split(",")));
-        TreeNode res = buildTree(nodes);
+        TreeNodeV2 res = buildTree(nodes);
         return res;
     }
 
-    private TreeNode buildTree(Queue<String> nodes) {
+    private TreeNodeV2 buildTree(Queue<String> nodes) {
         String val = nodes.poll();
         if ("null".equals(val) || val == null)
             return null;
-        TreeNode node = new TreeNode(Integer.parseInt(val));
+        TreeNodeV2 node = new TreeNodeV2(Integer.parseInt(val));
         node.left = buildTree(nodes);
         node.right = buildTree(nodes);
         return node;
     }
 
-    public String preorder(TreeNode root) {
+    public String preorder(TreeNodeV2 root) {
         if (root == null)
             return "null,";
         StringBuilder sb = new StringBuilder();
@@ -59,8 +58,8 @@ class Codec {
 
 class TreeNode {
     int val;
-    TreeNode left;
-    TreeNode right;
+    TreeNodeV2 left;
+    TreeNodeV2 right;
 
     TreeNode(int x) {
         val = x;

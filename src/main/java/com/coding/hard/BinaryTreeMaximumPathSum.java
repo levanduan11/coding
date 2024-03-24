@@ -1,18 +1,18 @@
-package hard;
+package com.coding.hard;
 
-class TreeNode {
+class TreeNodeV2 {
     int val;
-    TreeNode left;
-    TreeNode right;
+    TreeNodeV2 left;
+    TreeNodeV2 right;
 
-    TreeNode() {
+    TreeNodeV2() {
     }
 
-    TreeNode(int val) {
+    TreeNodeV2(int val) {
         this.val = val;
     }
 
-    TreeNode(int val, TreeNode left, TreeNode right) {
+    TreeNodeV2(int val, TreeNodeV2 left, TreeNodeV2 right) {
         this.val = val;
         this.left = left;
         this.right = right;
@@ -23,14 +23,14 @@ class TreeNode {
 public class BinaryTreeMaximumPathSum {
     int max = Integer.MIN_VALUE;
 
-    public int maxPathSum(TreeNode root) {
+    public int maxPathSum(TreeNodeV2 root) {
         if (root == null)
             return 0;
         traverse(root);
         return max;
     }
 
-    private int traverse(TreeNode root) {
+    private int traverse(TreeNodeV2 root) {
         if (root == null)
             return 0;
         int leftChild = traverse(root.left);
@@ -42,7 +42,7 @@ public class BinaryTreeMaximumPathSum {
         return Math.max(root.val, Math.max(root.val + rightChild, root.val + leftChild));
     }
 
-    void preOrder(TreeNode root) {
+    void preOrder(TreeNodeV2 root) {
         if (root == null)
             return;
         preOrder(root.left);
@@ -51,11 +51,11 @@ public class BinaryTreeMaximumPathSum {
     }
 
     public static void main(String[] args) {
-        TreeNode l1 = new TreeNode(9);
-        TreeNode rl1 = new TreeNode(15);
-        TreeNode rr1 = new TreeNode(7);
-        TreeNode r1 = new TreeNode(20, rl1, rr1);
-        TreeNode root = new TreeNode(-10, l1, r1);
+        TreeNodeV2 l1 = new TreeNodeV2(9);
+        TreeNodeV2 rl1 = new TreeNodeV2(15);
+        TreeNodeV2 rr1 = new TreeNodeV2(7);
+        TreeNodeV2 r1 = new TreeNodeV2(20, rl1, rr1);
+        TreeNodeV2 root = new TreeNodeV2(-10, l1, r1);
         System.out.println(root);
         var o = new BinaryTreeMaximumPathSum();
         var res = o.maxPathSum(root);

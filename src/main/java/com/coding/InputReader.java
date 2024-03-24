@@ -6,7 +6,6 @@ import java.util.stream.Stream;
 
 public final class InputReader {
     public static final String BASE_PATH = "/input";
-
     private InputReader() {
     }
 

@@ -1,4 +1,4 @@
-package hard;
+package com.coding.hard;
 
 public class WildcardMatching {
     public static boolean isMatch(String s, String p) {

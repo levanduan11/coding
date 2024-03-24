@@ -1,4 +1,4 @@
-package hard;
+package com.coding.hard;
 
 import java.util.regex.Pattern;
 

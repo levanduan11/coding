@@ -1,4 +1,4 @@
-package hard;
+package com.coding.hard;
 
 public class BestTimeBuySellStockIII {
     public static int maxProfit(int[] prices) {

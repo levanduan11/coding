@@ -1,4 +1,4 @@
-package hard;
+package com.coding.hard;
 
 class Solution1 {
     private final int[][] moves = {{2, 1}, {-2, 1}, {1, 2}, {-1, 2}, {2, -1}, {-2, -1}, {1, -2}, {-1, -2}};

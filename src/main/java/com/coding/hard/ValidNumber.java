@@ -1,4 +1,4 @@
-package hard;
+package com.coding.hard;
 
 public class ValidNumber {
     public static boolean isNumber(String s) {

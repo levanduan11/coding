@@ -1,4 +1,4 @@
-package hard;
+package com.coding.hard;
 
 public class ReadNCharactersGivenRead4 {
     private static int read4(char[] buf4) {
